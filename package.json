@@ -1,0 +1,63 @@
+{
+	"name": "persian-leap",
+	"version": "0.1.0",
+	"description": "Check if a year is a leap year in the Persian calendar.",
+	"author": "Shahab Movahhedi <dev@shmovahhedi.com> (https://shmovahhedi.com)",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/movahhedi/persian-leap"
+	},
+	"bugs": {
+		"url": "https://github.com/movahhedi/persian-leap/issues"
+	},
+	"homepage": "https://github.com/movahhedi/persian-leap#readme",
+	"keywords": [
+		"persian",
+		"leap",
+		"year",
+		"calendar",
+		"jalali",
+		"iranian",
+		"date",
+		"kabiseh",
+		"کبیسه",
+		"سال",
+		"جلالی",
+		"تقویم"
+	],
+	"packageManager": "yarn@4.4.0",
+	"type": "module",
+	"source": "./src/index.ts",
+	"exports": {
+		"require": "./dist/index.cjs",
+		"default": "./dist/index.modern.js"
+	},
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.module.js",
+	"unpkg": "./dist/index.umd.js",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"prepublishOnly": "yarn build",
+		"build": "microbundle",
+		"dev": "microbundle watch",
+		"test": "vitest"
+	},
+	"devDependencies": {
+		"microbundle": "^0.15.1",
+		"typescript": "^5.0.4",
+		"vitest": "^2.0.5"
+	},
+	"cspell": {
+		"version": "0.2",
+		"words": [
+			"microbundle",
+			"Birashk",
+			"jalali",
+			"kabiseh"
+		]
+	}
+}
