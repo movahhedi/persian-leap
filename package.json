@@ -1,6 +1,6 @@
 {
 	"name": "persian-leap",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Check if a year is a leap year in the Persian calendar.",
 	"author": "Shahab Movahhedi <dev@shmovahhedi.com> (https://shmovahhedi.com)",
 	"license": "MIT",
