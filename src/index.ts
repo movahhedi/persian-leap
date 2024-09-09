@@ -50,3 +50,35 @@ function isPersianLeapYearBirashk(year: number): boolean {
 		return leapYearRemainders.includes(remainder128);
 	}
 }
+
+/**
+ * Get the number of days in a Persian month.
+ * @param year The Persian year, to check if it's a leap year
+ * @param month The Persian month (1-12)
+ * @returns The number of days in the month
+ */
+export function getDaysInPersianMonth(year: number, month: number): number {
+	// Days in each month in a non-leap year
+	const daysInMonth = [
+		31, // Farvardin
+		31, // Ordibehesht
+		31, // Khordad
+		31, // Tir
+		31, // Mordad
+		31, // Shahrivar
+		30, // Mehr
+		30, // Aban
+		30, // Azar
+		30, // Dey
+		30, // Bahman
+		29, // Esfand
+	];
+
+	// If the month is Esfand and the year is a leap year, return 30
+	if (month === 12 && isPersianLeapYear(year)) {
+		return 30;
+	}
+
+	// Otherwise, return the number of days in the month
+	return daysInMonth[month - 1];
+}

@@ -19,9 +19,18 @@ pnpm add persian-leap
 ```
 
 ## Usage
+To check if a Persian year is a leap year or not, use the `isPersianLeapYear()` function.
 ```javascript
 import { isPersianLeapYear } from "persian-leap";
 
 console.log(isPersianLeapYear(1403)); // true
 console.log(isPersianLeapYear(1404)); // false
+```
+
+To get the number of days in a Persian month, use the `getDaysInPersianMonth()` function.
+```javascript
+import { getDaysInPersianMonth } from "persian-leap";
+
+console.log(getDaysInPersianMonth(1403, 12)); // 30
+console.log(getDaysInPersianMonth(1404, 12)); // 29
 ```
