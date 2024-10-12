@@ -107,3 +107,30 @@ export const leapYears1210To1498 = [
 	// (33ساله),
 	1474, 1478, 1482, 1486, 1490, 1494, 1498,
 ];
+
+/**
+ * Check if a Persian date is valid.
+ * @param year The Persian year
+ * @param month The Persian month
+ * @param day The Persian day
+ * @returns `true` if the date is valid, `false` otherwise.
+ */
+export function isPersianDateValid(year: number, month: number, day: number): boolean {
+	if (isNaN(year) || isNaN(month) || isNaN(day)) {
+		return false;
+	}
+
+	if (year < 1 || year > 9999) {
+		return false;
+	}
+
+	if (month < 1 || month > 12) {
+		return false;
+	}
+
+	if (day < 1 || day > getDaysInPersianMonth(year, month)) {
+		return false;
+	}
+
+	return true;
+}
