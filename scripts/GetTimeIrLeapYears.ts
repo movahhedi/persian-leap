@@ -23,7 +23,7 @@ function isResponseLeapYear(response: any) {
 	return response.data.date_list[0].is_leap_year;
 }
 
-const leapYears = [];
+const leapYears: number[] = [];
 
 for (let year = 1300; year <= 1415; year++) {
 	await (FetchFromTimeIr(year).then((response) => {

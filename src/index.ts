@@ -120,7 +120,7 @@ export function isPersianDateValid(year: number, month: number, day: number): bo
 		return false;
 	}
 
-	if (year < 1 || year > 9999) {
+	if (year < 1 /* || year > 9999 */) {
 		return false;
 	}
 
