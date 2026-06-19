@@ -9,17 +9,17 @@ Install it via [npm](https://www.npmjs.com/package/persian-leap):
 ```bash
 npm install persian-leap
 ```
-Or yarn:
-```bash
-yarn add persian-leap
-```
 Or pnpm:
 ```bash
 pnpm add persian-leap
 ```
+Or yarn:
+```bash
+yarn add persian-leap
+```
 
 ## Usage
-To check if a Persian year is a leap year or not, use the `isPersianLeapYear()` function.
+To check if a Persian year is a leap year or not, use `isPersianLeapYear()`.
 ```javascript
 import { isPersianLeapYear } from "persian-leap";
 
@@ -27,10 +27,17 @@ console.log(isPersianLeapYear(1403)); // true
 console.log(isPersianLeapYear(1404)); // false
 ```
 
-To get the number of days in a Persian month, use the `getDaysInPersianMonth()` function.
+To get the number of days in a Persian month, use `getDaysInPersianMonth()`.
 ```javascript
 import { getDaysInPersianMonth } from "persian-leap";
 
 console.log(getDaysInPersianMonth(1403, 12)); // 30
 console.log(getDaysInPersianMonth(1404, 12)); // 29
+```
+
+To check if a Persian date is valid, use `isPersianDateValid()`.
+```javascript
+import { isPersianDateValid } from "persian-leap";
+console.log(isPersianDateValid(1403, 12, 30)); // true
+console.log(isPersianDateValid(1404, 12, 30)); // false
 ```
