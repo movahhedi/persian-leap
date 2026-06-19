@@ -1,6 +1,6 @@
 {
 	"name": "persian-leap",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"description": "Check if a year is a leap year in the Persian calendar.",
 	"author": "Shahab Movahhedi <dev@shmovahhedi.com> (https://shmovahhedi.com)",
 	"license": "MIT",
@@ -30,26 +30,28 @@
 	"source": "./src/index.ts",
 	"exports": {
 		"require": "./dist/index.cjs",
-		"default": "./dist/index.modern.js"
+		"default": "./dist/index.mjs",
+		"types": "./dist/index.d.ts"
 	},
 	"main": "./dist/index.cjs",
-	"module": "./dist/index.module.js",
-	"unpkg": "./dist/index.umd.js",
+	"module": "./dist/index.mjs",
+	"unpkg": "./dist/index.cjs",
+	"require": "./dist/index.cjs",
 	"types": "./dist/index.d.ts",
 	"files": [
 		"dist"
 	],
 	"packageManager": "pnpm@10.28.2",
 	"scripts": {
-		"prepublishOnly": "yarn build",
-		"build": "microbundle",
-		"dev": "microbundle watch",
+		"prepublishOnly": "pnpm build",
+		"build": "tsdown",
+		"dev": "tsdown watch",
 		"test": "vitest"
 	},
 	"devDependencies": {
-		"microbundle": "^0.15.1",
-		"typescript": "^5.0.4",
-		"vitest": "^2.0.5"
+		"tsdown": "^0.22.3",
+		"typescript": "^6.0.3",
+		"vitest": "^4.1.9"
 	},
 	"cspell": {
 		"version": "0.2",

@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { isPersianLeapYear, leapYears1210To1498, isPersianDateValid } from "../src";
+import { isPersianLeapYear, leapYears1210To1498, isPersianDateValid } from "../src/index.js";
 
 function TestWithReferenceYears(referenceYears: number[]) {
 	for (let year = referenceYears[0]; year <= referenceYears[referenceYears.length - 1]; year++) {
@@ -20,9 +20,6 @@ test("check leap years from Wikipedia", async () => {
 
 // test isPersianDateValid
 test("check isPersianDateValid", async () => {
-	expect(isPersianDateValid(1399, 12, 30)).toBe(true);
-	expect(isPersianDateValid(1399, 12, 31)).toBe(false);
-	expect(isPersianDateValid(1399, 13, 1)).toBe(false);
 	expect(isPersianDateValid(1399, 0, 1)).toBe(false);
 	expect(isPersianDateValid(1399, 1, 1)).toBe(true);
 	expect(isPersianDateValid(1399, 6, 31)).toBe(true);
@@ -37,4 +34,6 @@ test("check isPersianDateValid", async () => {
 	expect(isPersianDateValid(1399, 11, 30)).toBe(true);
 	expect(isPersianDateValid(1399, 12, 29)).toBe(true);
 	expect(isPersianDateValid(1399, 12, 30)).toBe(true);
+	expect(isPersianDateValid(1399, 12, 31)).toBe(false);
+	expect(isPersianDateValid(1399, 13, 1)).toBe(false);
 });
