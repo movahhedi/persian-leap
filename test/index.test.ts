@@ -36,4 +36,7 @@ test("check isPersianDateValid", async () => {
 	expect(isPersianDateValid(1399, 12, 30)).toBe(true);
 	expect(isPersianDateValid(1399, 12, 31)).toBe(false);
 	expect(isPersianDateValid(1399, 13, 1)).toBe(false);
+	expect(isPersianDateValid("1380/05/08")).toBe(true);
+	expect(isPersianDateValid("1380/5/08")).toBe(true);
+	expect(isPersianDateValid("1380/95/08")).toBe(false);
 });
